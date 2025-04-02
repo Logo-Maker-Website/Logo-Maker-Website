@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap');
+
+body {
+    background: rgb(255, 208, 174);
+}
+
+nav ul {
+    align-items: center;
+    justify-content: center;
+}
+
+.cont {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+.cont-left {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+
+.cont-left-title h2 {
+    font-weight: 600;
+    color: white;
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+
+.cont-left-title hr {
+    border: none;
+    width: 200px;
+    height: 5px;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.cont-input {
+    width: 400px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding-left: 25px;
+    font-weight: 500;
+    color: #666;
+    border-radius: 50px;
+    transition: .6s;
+}
+
+.cont-left textarea {
+    width: 650px;
+    height: 300px;
+    padding-top: 15px;
+    border-radius: 20px;
+    resize: none;
+    font-size: 18px;
+}
+
+.cont-input:focus {
+    box-shadow: 0 0 15px rgb(13, 221, 152),
+        0 0 75px rgb(13, 221, 152);
+    border: 1px solid rgb(13, 221, 152);
+}
+
+.cont-input::placeholder {
+    color: #a9a9a9;
+}
+
+.cont-left button {
+    display: flex;
+    align-items: center;
+    padding: 15px 90px;
+    font-size: 16px;
+    color: white;
+    gap: 10px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(270deg, #ff994f, #fa6d86);
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+.cont-left button:hover {
+    box-shadow: 0 0 15px rgb(13, 221, 152),
+        0 0 75px rgb(13, 221, 152);
+}
+
+.cont-left button img {
+    height: 15px;
+}
+
+.cont-right img {
+    width: 400px;
+}
+
+@media (max-width: 800px) {
+    .cont-input {
+        width: 80vw;
+    }
+
+    .cont-right {
+        display: none;
+    }
+}
+
+
+/* Responsive Navbar */
+
+@media (max-width:600px) {
+    nav ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.5);
+        gap: 0;
+        overflow: hidden;
+    }
+
+    nav ul li {
+        padding: 20px;
+        padding-top: 13px;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    #menuList {
+        transition: all 0.5s;
+    }
+
+    .search {
+        position: absolute;
+        top: 87%;
+        left: 20%;
+        transform: translate(-50%, -50%);
+    }
+
+    .search input:focus {
+        width: 250px;
+    }
+}
+
+@media (max-width: 900px) {
+    nav ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.5);
+        gap: 0;
+        overflow: hidden;
+    }
+
+    .cont-right {
+        display: none;
+    }
+
+    nav ul li {
+        padding: 20px;
+        padding-top: 13px;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    #menuList {
+        transition: all 0.5s;
+    }
+
+    .n1 .search {
+        display: none;
+    }
+}
+
+.footer {
+    position: absolute;
+    bottom: -70%;
+}
+
+.contact-hr {
+    width: 95%;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    height: 6px;
+    border-radius: 10px;
+    border: none;
+}
+
+.contact-btns {
+    display: flex;
+    gap: 100px;
+    position: absolute;
+    top: 104%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    padding: 35px 35px 35px 35px;
+    border-radius: 15px;
+}
+
+.whatsapp-btn,
+.facebook-btn,
+.telegram-btn,
+.X-btn {
+    background-color: white;
+    border: none;
+    padding: 12px 12px 12px 12px;
+    border-radius: 10px;
+    white-space: nowrap;
+    font-family: "Rammetto One", sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.whatsapp-btn i,
+.facebook-btn i,
+.telegram-btn i,
+.X-btn i {
+    font-size: 25px;
+}
+
+.whatsapp-btn {
+    background-color: #25D366;
+    box-shadow: 0px 0px 20px green;
+}
+
+.whatsapp-btn:hover {
+    box-shadow: 0px 0px 40px green;
+    color: white;
+}
+
+.facebook-btn {
+    background-color: #1877F2;
+    color: white;
+    box-shadow: 0px 0px 20px #1877F2;
+}
+
+.facebook-btn:hover {
+    box-shadow: 0px 0px 40px #1877F2;
+    color: aquamarine;
+}
+
+.telegram-btn {
+    background-color: #229ED9;
+    color: white;
+    box-shadow: 0px 0px 20px #229ED9;
+}
+
+.telegram-btn:hover {
+    box-shadow: 0px 0px 40px #229ED9;
+    color: aqua;
+}
+
+.X-btn {
+    background-color: black;
+    color: white;
+    box-shadow: 0px 0px 20px black;
+}
+
+.X-btn:hover {
+    box-shadow: 0px 0px 40px black;
+    color: violet;
+}
+
+@media (min-width: 300px) and (max-width: 599px) {
+
+    .contact-btns{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        position: absolute;
+        top: 110%;
+        width: 90%;
+        align-items: center;
+        padding-bottom: 20px;
+    }
+
+    .facebook-btn,
+    .telegram-btn,
+    .X-btn,
+    .whatsapp-btn,
+    .facebook-btn i,
+    .telegram-btn i,
+    .X-btn i,
+    .whatsapp-btn i {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 600px) and  (max-width: 899px){
+    .contact-btns{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        position: absolute;
+        top: 115%;
+        width: 90%;
+        align-items: center;
+        padding-bottom: 20px;
+    }
+
+    .facebook-btn,
+    .telegram-btn,
+    .X-btn,
+    .whatsapp-btn,
+    .facebook-btn i,
+    .telegram-btn i,
+    .X-btn i,
+    .whatsapp-btn i {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 900px) and (max-width: 1050px){
+
+    .facebook-btn,
+    .telegram-btn,
+    .X-btn,
+    .whatsapp-btn,
+    .facebook-btn i,
+    .telegram-btn i,
+    .X-btn i,
+    .whatsapp-btn i {
+        font-size: 16.5px;
+    }
+}
